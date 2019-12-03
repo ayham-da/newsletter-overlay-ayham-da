@@ -28,9 +28,9 @@ span2.onclick = function() {
     modal2.style.display = "none";
   }
 
-window.onclick = function(event) {
-  if (event.target == modal1 || event.target == this.modal2) {
+ document.body.addEventListener( "click",event => {
+  if (event.target == modal1 || event.target == modal2) {
     this.modal1.style.display = "none";
     this.modal2.style.display = "none";
   }
-}
+ })
